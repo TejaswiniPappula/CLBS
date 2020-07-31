@@ -1,0 +1,146 @@
+﻿<html>
+
+<head>
+
+<title>WELCOME TO REGISTRATION PAGE</title>
+
+</head>
+
+<script>
+
+function validate()
+{
+
+var name = document.RegForm.Name.value;
+
+var branch = document.RegForm.Branch.value;
+var rno = document.RegForm.Rno.value;
+
+var year = document.RegForm.Year.value;
+var phnumber = document.RegForm.Phonenumber.value;
+
+var email = document.RegForm.Email.value;
+ 
+var pword = document.RegForm.Password.value;
+    
+if (name==null || name.length < 4){
+alert("Name can't be blank and its length should be atleast 6");
+return false;
+}
+if (branch==null||branch.length<2){
+alert("Branch can't be blank");
+return false;
+}
+
+if (rno==null || rno.length != 10){
+alert("Register no can't be blank and its length should be 10");
+return false;
+}
+if (year==null || year.length!=1){
+alert("Year can't be blank and it should be a numerical value (like 1,2,3,4)");
+return false;
+}
+if(phnumber.length==0 || phnumber.length<10 || phnumber.length>10){  
+    
+alert("Phonenumber should contain 10 digits only.");  
+   
+return false;  
+   
+}  
+    
+var atposition=email.indexOf("@");  
+ 
+var dotposition=email.lastIndexOf(".");  
+
+if (atposition<1 || dotposition<atposition+2 || dotposition+1>=email.length){
+alert("Please enter a valid e-mail address");
+return false;
+   
+} 
+   
+if(pword.length<6){  
+  
+alert("Password must be at least 6 characters long.");  
+
+return false;  
+   
+}   
+   
+}
+</script>
+<style>
+div {
+  background-color: lightgrey;
+  width: 400px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+.button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<body style="background-color:powderblue;">
+<center>
+<br>
+<h1><font color = "green">CREATE A NEW ACCOUNT</font></h1>
+<div>
+<form name = "RegForm" onsubmit = "return validate();" action = "registration1.php" method = "post" >
+<table border="0" cellspacing = 10>
+
+<tr>
+<td><font size = 5>Name:</font></td>
+<td><input type="text" size=20 name = "Name"/>
+</td>
+</tr>
+<tr>
+<td><font size = 5>Branch:</font></td>
+<td><input type="text" size=20 name = "Branch"/>
+</td>
+</tr>
+<tr>
+<td><font size = 5>Registerno:</font></td>
+<td><input type="text" size=20 name = "Rno"/>
+</td>
+</tr>
+<tr>
+<td><font size = 5>Year:</font></td>
+<td><input type="text" size=20 name = "Year"/>
+</td>
+</tr>
+<tr>
+<td><font size = 5>Phonenumber:</font></td>
+<td><input type="text" size=20 name = "Phonenumber"/>
+</td>
+</tr>
+<tr>
+<td><font size = 5>Email:</font></td>
+<td><input type="text" size=20 name = "Email"/>
+</td>
+</tr>
+<tr>
+<td><font size = 5>Password:</font></td>
+<td><input type="password" size=20 name = "Password"/>
+</td>
+<tr>
+<td align = center><button type = "submit" class = "button"><font size = 4>REGISTER</font></button></td>
+<td align = center><button type = "submit" class = "button"><font size = 4>RESET</font></button>
+</td>
+</tr>
+</table>
+</form>
+
+</div>
+</center>
+</body>
+
+</html>

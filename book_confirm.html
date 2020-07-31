@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+<style>
+div {
+  background-color: lightgrey;
+  width: 700px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+.button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body style="background-color:powderblue;">
+<center>
+<br>
+<h1><font color = "green">THE BOOK YOU HAVE BEEN SEARCHING IS AVAILABLE</font></h1>
+<div>
+<form action = "book_confirm1.php" method = "post">
+<table border="0" cellspacing = 10>
+<tr>
+<td><font size = 5>Registerno:</font></td>
+<td><input type="text" size="50" name="Rno">
+</td>
+</tr>
+<tr>
+<td><font size = 5>Phonenumber:</font></td>
+
+<td><input type="text" size="50" name = "Phonenumber" required/>
+</td>
+</tr>
+<tr>
+<td><font size = 5>BookName:</font></td>
+<td><input type = "text" size = "50" name = "bname" required/></td>
+</tr>
+<tr>
+<td><font size = 5>Author:</font></td>
+<td><input type = "text" size = "50" name = "author" required/></td>
+</tr>
+<tr>
+<td><font size = 5>Edition:</font></td>
+<td><input type = "text" size = "50" name = "edition" required/></td>
+</tr>
+<tr>
+<td align = center>
+<button type = "submit" class = "button"><font size = 4>CONFIRM THE BOOK</font></button>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</center>
+</body>
+</html>
